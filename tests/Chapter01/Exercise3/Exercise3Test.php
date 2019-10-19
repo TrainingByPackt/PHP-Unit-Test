@@ -1,6 +1,6 @@
 <?php
 
-namespace Chapter01\Exercise1;
+namespace Chapter01\Exercise3;
 
 use PHPUnit\Framework\TestCase;
 
