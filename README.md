@@ -29,3 +29,4 @@ the Book, you use **Composer**. If you look into the __composer.json__ file incl
 Chapter 6).
 - Symfony CSS Selector: a library to filter the contents of HTML documents using HTML tags and CSS selectors.
 - Monolog: a library to handle logging.
+- Guzzle: a library that wraps up CURL so that it is easier to handle them.
