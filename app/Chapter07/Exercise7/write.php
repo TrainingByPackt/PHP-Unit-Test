@@ -1,6 +1,6 @@
 <?php
 
-$fileFwrite = 'sample/write-with-fwrite.txt';
+$fileFwrite = __DIR__ . '/sample/write-with-fwrite.txt';
 $fp = fopen($fileFwrite, 'w+');
 $written = fwrite($fp, 'File written with fwrite().' . PHP_EOL);
 
@@ -12,7 +12,7 @@ if (false === $written) {
     echo fread($fp, filesize($fileFwrite)) . PHP_EOL;
 }
 
-$fileFpc = 'sample/write-with-fpc.txt';
+$fileFpc = __DIR__ . '/sample/write-with-fpc.txt';
 $written = file_put_contents($fileFpc, 'File written with file_put_contents().' . PHP_EOL);
 
 if (false === $written) {

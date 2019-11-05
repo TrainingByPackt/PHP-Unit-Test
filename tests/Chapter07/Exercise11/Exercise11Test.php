@@ -8,7 +8,8 @@ class Exercise11Test extends TestCase
 {
     public function test_can_copy_file()
     {
-        $expected = 'The [sample/to-copy.txt] file was copied to [sample/to-copy.txt.bak].';
+        $path = str_replace('tests', 'app', __DIR__);
+        $expected = "The [$path/sample/to-copy.txt] file was copied to [$path/sample/to-copy.txt.bak].";
         $actual = exec("php -f app/Chapter07/Exercise11/copy.php");
         $this->assertStringContainsString($expected, $actual);
     }

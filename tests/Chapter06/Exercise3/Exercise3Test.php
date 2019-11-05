@@ -23,7 +23,7 @@ class Exercise3Test extends TestCase
         $this->assertStringContainsStringIgnoringCase($expected, $actual);
 
         $actual = $paragraphs->eq(2)->text();
-        $this->assertRegExp('/^The name \[(A-Bomb (HAS)|Captain America|Black Panther)\] was picked and stored in current session.$/', $actual);
+        $this->assertRegExp('/^The name \[(A-Bomb \(HAS\)|Captain America|Black Panther)\] was picked and stored in current session.$/', $actual);
     }
 
     private function actual(): string

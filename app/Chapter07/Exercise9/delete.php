@@ -1,6 +1,6 @@
 <?php
 
-$filepath = 'sample/to-delete.txt';
+$filepath = __DIR__ . '/sample/to-delete.txt';
 
 if (is_file($filepath)) {
     if (unlink($filepath)) {

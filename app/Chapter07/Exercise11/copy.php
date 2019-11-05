@@ -1,7 +1,7 @@
 <?php
 
-$sourceFilePath = 'sample/to-copy.txt';
-$targetFilePath = 'sample/to-copy.txt.bak';
+$sourceFilePath = __DIR__ . '/sample/to-copy.txt';
+$targetFilePath = __DIR__ . '/sample/to-copy.txt.bak';
 
 if (!is_file($sourceFilePath)) {
     echo sprintf('The [%s] file does not exist.', $sourceFilePath) . PHP_EOL;

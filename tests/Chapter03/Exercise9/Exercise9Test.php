@@ -14,6 +14,7 @@ class Exercise9Test extends TestCase
         $this->assertStringContainsString("Mathematics", $actual);
         $this->assertStringContainsString("Business English", $actual);
         $this->assertStringContainsString("Graph Theory", $actual);
+        $this->assertStringContainsString("Computer Programming", $actual);
         $this->assertStringContainsString("The Profession is Programmer.", $actual);
         $this->assertStringContainsString("The Profession is Lawyer.", $actual);
         $this->assertStringContainsString("The Profession is Athlete.", $actual);

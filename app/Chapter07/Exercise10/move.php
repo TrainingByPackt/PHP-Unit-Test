@@ -1,7 +1,7 @@
 <?php
 
-$filePath = 'sample/to-move.txt';
-$targetDirectory = 'sample/archive/2019';
+$filePath = __DIR__ . '/sample/to-move.txt';
+$targetDirectory = __DIR__ . '/sample/archive/2019';
 
 if (!is_file($filePath)) {
     echo sprintf('The [%s] file does not exist.', $filePath) . PHP_EOL;
