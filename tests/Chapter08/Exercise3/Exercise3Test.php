@@ -30,7 +30,7 @@ class Exercise3Test extends TestCase
     public function test_negative_argument_throws_error()
     {
         $expected = 'sqrt(3) = 1.7320508075689';
-        $actual = exec("php -f app/Chapter08/Exercise3/sqrt.php -3");
+        $actual = exec("php -f app/Chapter08/Exercise3/sqrt.php -- -3");
         $this->assertStringContainsString($expected, $actual);
     }
 }
