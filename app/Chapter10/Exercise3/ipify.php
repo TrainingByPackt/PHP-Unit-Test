@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Chapter10\Exercise3;
+require (__DIR__ . '/../../../vendor/autoload.php');
 
 use GuzzleHttp\Client;
 
