@@ -8,17 +8,14 @@ class ActivityTest extends TestCase
 {
     public function test_can_log()
     {
-        exec("php -f app/Chapter09/Activity/index.php");
+        $actual = exec("php -f app/Chapter09/Activity/index.php");
         $expectedOne = 'Something';
         $expectedTwo = 'This is an informational message';
         $expectedThree = 'This message logs an error condition';
         $expectedFour = 'This message logs unexpected exceptions';
-        $f = fopen('app/Chapter09/Activity/application_log', 'r');
+        $this->assertStringContainsString($expectedOne, $actual);
+        $f = fopen('app/Chapter09/Activity/logs/app.log', 'r');
         if (!feof($f)) {
-            $actual = fgets($f);
-            $expected = 'Undefined variable: width';
-            $this->assertStringContainsString($expectedOne, $actual);
-
             $actual = fgets($f);
             $this->assertStringContainsString($expectedTwo, $actual);
 

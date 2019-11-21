@@ -1,10 +1,11 @@
 <?php
 
-namespace app\Chapter09\Activity;
+namespace App\Chapter09\Activity;
+require (__DIR__ . '/../../../vendor/autoload.php');
 
 use Monolog\Logger;
 
-Class Example
+class Example
 {
 	public function __construct(Logger $logger)
 	{

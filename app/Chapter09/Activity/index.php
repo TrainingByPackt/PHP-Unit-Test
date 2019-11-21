@@ -1,12 +1,13 @@
 <?php
 
-namespace app\Chapter09\Activity;
+namespace App\Chapter09\Activity;
+require (__DIR__ . '/../../../vendor/autoload.php');
 
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 
 $logger = new Logger('application_log');
-$logger->pushHandler(new StreamHandler('./logs/app.log', Logger::INFO));
+$logger->pushHandler(new StreamHandler(__DIR__ . '/logs/app.log', Logger::INFO));
 
 $e = new Example($logger);
 $e->doSomething();
