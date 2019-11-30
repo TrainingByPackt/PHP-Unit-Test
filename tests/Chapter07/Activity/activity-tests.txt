@@ -1,0 +1,15 @@
+You will find the tests for this Activity under the folder "app/Chapter07/Activity/tests".
+
+The reason for this is that those are not Unit Tests, but Functional Tests: they require an external service to exist
+in order to run, in this case, a Database.
+
+In order to run these tests you will need to set the parameters included in the Database Connection class:
+
+- The host, where the database runs.
+- The credentials, i.e., a user and a password. The values provided are 'php-user' and 'php-pass', you should change them
+to whatever values you configured in the database first.
+- The schema, or database to connect to. In the files provided, it is called "app", but you might change it to whatever
+name you like most, just do not forget to change it wherever used.
+
+To run the tests, you will need to start the web server in "app/Chapter07/Activity/web" folder. Afterwards, just run
+"vendor/bin/phpunit app/Chapter07/Activity/tests".
