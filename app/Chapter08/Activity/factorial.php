@@ -82,7 +82,7 @@ if (!count($arguments)) {
         } catch (NotANumber | DecimalNumber | NumberIsZeroOrNegative $e) {
             printError(sprintf('[%s]: %s', get_class($e), $e->getMessage()));
         } catch (Throwable $e) {
-            printError("Unexpected error occured for [$argument] input number.");
+            printError("Unexpected error occurred for [$argument] input number.");
             $exceptionHandler($e);
         }
     }
