@@ -12,10 +12,10 @@ if ($result === false) {
     return;
 }
 
-echo "All records" . PHP_EOL;
-while ($record = $result->fetch()) {
-    echo implode("\t", $record) . PHP_EOL;
-}
+    // echo "All records" . PHP_EOL;
+    // while ($record = $result->fetch()) {
+    //     echo implode("\t", $record) . PHP_EOL;
+    // }
 
 $result = $pdo->query("SELECT * FROM users LIMIT 2");
 echo PHP_EOL . "Use LIMIT 2" . PHP_EOL;

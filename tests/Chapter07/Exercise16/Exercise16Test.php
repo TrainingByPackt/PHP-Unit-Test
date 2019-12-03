@@ -17,7 +17,7 @@ class Exercise16Test extends TestCase
 
     public function test_can_insert_record_with_email()
     {
-        $expected = "Successfully inserted into users table the record with id 1";
+        $expected = "Successfully inserted into users table the record with id 2";
         $actual = exec("php -f app/Chapter07/Exercise16/insert-prepared.php " . self::EMAIL);
         $this->assertStringContainsString($expected, $actual);
     }
