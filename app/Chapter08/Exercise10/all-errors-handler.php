@@ -16,7 +16,7 @@ $errorHandler = function (int $code, string $message, string $file, int $line) u
     $exception = new ErrorException($message, $code, $code, $file, $line);
     $exceptionHandler($exception);
     if (in_array($code, [E_ERROR, E_RECOVERABLE_ERROR, E_USER_ERROR])) {
-        exit(1);
+        // exit(1);
     }
 };
 

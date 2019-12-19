@@ -32,7 +32,7 @@ function handle(array $input)
 
 try {
     $output = handle($argv);
-    echo 'Result: ', print_r($output, true);
+    print 'Result: ' . print_r($output, true);
 } catch (Disposable $e) {
     echo '(!) ', $e->getMessage(), PHP_EOL;
     exit(1);

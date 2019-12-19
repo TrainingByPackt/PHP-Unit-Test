@@ -16,15 +16,9 @@ class Exercise10Test extends TestCase
 
     public function test_date_time_argument_returns_valid_result()
     {
-        $expected = "Result: " . print_r(new DateTime());
-        $actual = $this->actual();
+        $expected = "Result: " . print_r(new DateTime(), true);
+        $actual = exec("php -f app/Chapter08/Exercise10/date.php DateTime");
         $this->assertStringContainsString($expected, $actual);
     }
 
-    private function actual(): string
-    {
-        ob_start();
-        exec("php -f app/Chapter08/Exercise10/date.php DateTime");
-        return ob_get_clean();
-    }
 }

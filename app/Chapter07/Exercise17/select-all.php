@@ -1,7 +1,7 @@
 <?php
 
 /** @var PDO $pdo */
-$pdo = require 'connection.php';
+require 'connection.php';
 
 $statement = "SELECT * FROM users";
 
@@ -12,25 +12,25 @@ if ($result === false) {
     return;
 }
 
-echo "All records" . PHP_EOL;
+print "All records";
 while ($record = $result->fetch()) {
-    echo implode("\t", $record) . PHP_EOL;
+    print implode("\t", $record);
 }
 
 $result = $pdo->query("SELECT * FROM users LIMIT 2");
-echo PHP_EOL . "Use LIMIT 2" . PHP_EOL;
+print "\t". " Use LIMIT 2";
 while ($record = $result->fetch()) {
-    echo implode("\t", $record) . PHP_EOL;
+    print implode("\t", $record);
 }
 
 $result = $pdo->query("SELECT * FROM users WHERE id > 3");
-echo PHP_EOL . "Use WHERE id > 3" . PHP_EOL;
+print "\t"." Use WHERE id > 3";
 while ($record = $result->fetch()) {
-    echo implode("\t", $record) . PHP_EOL;
+    print implode("\t", $record);
 }
 
 $result = $pdo->query("SELECT * FROM users ORDER BY id DESC");
-echo PHP_EOL . "Use ORDER BY id DESC" . PHP_EOL;
+print "\t". " Use ORDER BY id DESC";
 while ($record = $result->fetch()) {
-    echo implode("\t", $record) . PHP_EOL;
+    print implode("\t", $record);
 }
