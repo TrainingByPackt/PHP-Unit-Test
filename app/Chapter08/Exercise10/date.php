@@ -23,7 +23,7 @@ function handle(array $input)
         throw new Disposable(sprintf('Unknown/Bad timezone: [%s]', $timezone));
     }
     try {
-        $dateTime = new $calleeName($time, $dateTimeZone);
+        $dateTime = new $calleeName($time, $timezone);
     } catch (Exception $e) {
         throw new Disposable(sprintf('Cannot build date from [%s]', $time));
     }
@@ -32,7 +32,7 @@ function handle(array $input)
 
 try {
     $output = handle($argv);
-    print 'Result: ' . print_r($output, true);
+    echo 'Result: ', print_r($output);
 } catch (Disposable $e) {
     echo '(!) ', $e->getMessage(), PHP_EOL;
     exit(1);
